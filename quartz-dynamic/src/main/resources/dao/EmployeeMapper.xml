@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.doctortech.quartz.mapper.EmployeeMapper">
+    <insert id="insert">
+        INSERT INTO sys_user_staff_ref(staff_id, user_id) VALUES (#{id}, #{userId})
+    </insert>
+
+    <select id="count" resultType="java.lang.Integer">
+    SELECT COUNT(*) FROM sys_user_staff_ref susr LEFT JOIN sys_user su ON susr.user_id = su.user_id  WHERE real_name = #{name}
+  </select>
+    <select id="selectUserId" resultType="java.lang.Long">
+        SELECT user_id FROM sys_user WHERE real_name = #{name}
+    </select>
+
+</mapper>

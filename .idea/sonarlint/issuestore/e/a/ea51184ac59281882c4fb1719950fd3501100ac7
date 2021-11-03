@@ -1,0 +1,32 @@
+
+X
+java:S1854+"=Remove this useless assignment to local variable "runnable1".(®­† úÿÿÿÿ
+W
+java:S1854$"<Remove this useless assignment to local variable "runnable".(äë¬±üÿÿÿÿ
+S
+java:S1854#"8Remove this useless assignment to local variable "num2".(Ð™öãüÿÿÿÿ
+D
+java:S1481#")Remove this unused "num2" local variable.(Ð™öãüÿÿÿÿ
+N	java:S106'"9Replace this use of System.out or System.err by a logger.(³ªµ‹
+H
+java:S1481$"-Remove this unused "runnable" local variable.(äë¬±üÿÿÿÿ
+S	java:S106+"9Replace this use of System.out or System.err by a logger.(®­† úÿÿÿÿ
+I
+java:S1481+".Remove this unused "runnable1" local variable.(®­† úÿÿÿÿ
+V	java:S1251"<This block of commented-out lines of code should be removed.(ƒ„ú„úÿÿÿÿ
+D
+java:S16112"/Remove the parentheses around the "x" parameter(”ŒØi
+A
+java:S16122",Replace this lambda with a method reference.(”ŒØi
+M	java:S1062"9Replace this use of System.out or System.err by a logger.(”ŒØi
+R
+java:S18547"7Remove this useless assignment to local variable "com".(¬¡ûùÿÿÿÿ
+G
+java:S16127",Replace this lambda with a method reference.(¬¡ûùÿÿÿÿ
+C
+java:S14817"(Remove this unused "com" local variable.(¬¡ûùÿÿÿÿ
+D
+java:S1611="/Remove the parentheses around the "x" parameter(©à‚[
+N	java:S106>"9Replace this use of System.out or System.err by a logger.(üªæá
+C
+java:S1604$"(Make this anonymous inner class a lambda(äë¬±üÿÿÿÿ

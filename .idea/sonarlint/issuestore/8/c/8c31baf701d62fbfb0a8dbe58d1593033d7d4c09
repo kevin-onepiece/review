@@ -1,0 +1,13 @@
+
+S
+java:S1854"8Remove this useless assignment to local variable "wang".(Ëèà¬ùÿÿÿÿ
+M
+java:S1854"7Remove this useless assignment to local variable "foo".(ÜêéÂ
+>
+java:S1481"(Remove this unused "foo" local variable.(ÜêéÂ
+D
+java:S1481")Remove this unused "wang" local variable.(Ëèà¬ùÿÿÿÿ
+S	java:S106%"9Replace this use of System.out or System.err by a logger.(Ú¾¬ûÿÿÿÿ
+S	java:S1069"9Replace this use of System.out or System.err by a logger.(Ú¾¬ûÿÿÿÿ
+>
+java:S1604"(Make this anonymous inner class a lambda( Î°¡

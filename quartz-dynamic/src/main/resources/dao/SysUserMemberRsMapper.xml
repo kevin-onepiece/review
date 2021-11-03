@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.doctortech.quartz.mapper.SysUserMemberRsMapper">
+
+    <resultMap id="BaseResultMap" type="com.doctortech.quartz.entity.UserMemberRs">
+        <!--@mbg.generated-->
+        <!--@Table sys_user_member_rs-->
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="modify_time" jdbcType="TIMESTAMP" property="modifyTime"/>
+        <result column="create_user_id" jdbcType="INTEGER" property="createUserId"/>
+        <result column="deleted" jdbcType="INTEGER" property="deleted"/>
+        <result column="user_id" jdbcType="BIGINT" property="userId"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        id, create_time, modify_time, create_user_id, deleted, user_id
+    </sql>
+
+    <resultMap id="userVo" type="com.doctortech.quartz.entity.UserVO" autoMapping="true">
+        <id column="user_id" property="userId"/>
+<!--        <association property="userMemberRsVo" javaType="com.doctortech.quartz.entity.UserMemberRsVo">-->
+            <result column="start_time" property="startTime"/>
+            <result column="end_time" property="endTime"/>
+            <result column="open_mode" property="openMode"/>
+            <result column="member_source" property="source"/>
+            <result column="member_name" property="memberName"/>
+            <result column="member_id" property="memberId"/>
+<!--        </association>-->
+    </resultMap>
+
+    <select id="pageOfMember" resultMap="userVo">
+        select su.*,
+#         su.type as type_name,
+        sumr.start_time,
+        sumr.end_time,
+#         sumr.open_mode,
+        sumr.source as member_source,
+        sm.name as member_name
+        from sys_user_member_rs sumr
+        left join (SELECT * FROM sys_user su1 where su1.del_flag = 0) su on su.user_id = sumr.user_id
+        left join sys_member sm on su.member_id = sm.id
+        <where>
+            su.user_id is not null
+            <if test="keyword != null and keyword != ''">
+                and (su.username like concat('%', #{keyword}, '%')
+                or su.phone like concat('%', #{keyword}, '%')
+                or sumr.source like concat('%', #{keyword}, '%'))
+            </if>
+            <if test="openMode != null">
+                and sumr.open_mode = #{openMode}
+            </if>
+            <if test="ids != null and ids.size() != 0">
+                and su.user_id in (
+                <foreach collection="ids" item="item" separator=",">
+                    #{item}
+                </foreach>
+                )
+            </if>
+        </where>
+        order by sumr.create_time desc
+    </select>
+</mapper>

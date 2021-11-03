@@ -1,0 +1,44 @@
+
+Q
+java:S1854"6Remove this useless assignment to local variable "ts".(ÅØ¬¯ÿÿÿÿÿ
+B
+java:S1481"'Remove this unused "ts" local variable.(ÅØ¬¯ÿÿÿÿÿ
+R
+java:S1854#"<Remove this useless assignment to local variable "integers".(®÷îÀ
+V	java:S125!"<This block of commented-out lines of code should be removed.(È“Çöüÿÿÿÿ
+G
+java:S1612"",Replace this lambda with a method reference.(‘Š­Åúÿÿÿÿ
+C
+java:S1481#"-Remove this unused "integers" local variable.(®÷îÀ
+X
+java:S1117,"=Rename "employees" which hides the field declared at line 50.(ŸœïÚüÿÿÿÿ
+N	java:S106."9Replace this use of System.out or System.err by a logger.(¼¡¨ò
+X
+java:S1117@"=Rename "employees" which hides the field declared at line 50.(İº—úÿÿÿÿ
+X
+java:S1117Q"=Rename "employees" which hides the field declared at line 50.(İº—úÿÿÿÿ
+S
+java:S1854b">Remove this useless assignment to local variable "employees1".(¦Ì¦
+X
+java:S1854`"=Remove this useless assignment to local variable "employees".( ã´ûşÿÿÿÿ
+X
+java:S1117`"=Rename "employees" which hides the field declared at line 50.( ã´ûşÿÿÿÿ
+I
+java:S1481`".Remove this unused "employees" local variable.( ã´ûşÿÿÿÿ
+D
+java:S1481b"/Remove this unused "employees1" local variable.(¦Ì¦
+X
+java:S1117i"=Rename "employees" which hides the field declared at line 50.(İº—úÿÿÿÿ
+S
+java:S1117w"=Rename "employees" which hides the field declared at line 50.(‚ØäÔ
+B
+java:S1481~"-Remove this unused "employee" local variable.(ÃÎìg
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ
+O	java:S106‰"9Replace this use of System.out or System.err by a logger.(ÜÁ®²
+F
+java:S1611“"/Remove the parentheses around the "e" parameter(¯…¾ñ
+T	java:S106•"9Replace this use of System.out or System.err by a logger.(¹¦…‡úÿÿÿÿ
+C
+java:S1604"(Make this anonymous inner class a lambda(ğ±æîıÿÿÿÿ
+>
+java:S1604w"(Make this anonymous inner class a lambda(‚ØäÔ
